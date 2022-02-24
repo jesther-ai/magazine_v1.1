@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
-                expandedHeight: 500.0,
+                expandedHeight: 550.0,
                 elevation: 3,
                 floating: false,
                 pinned: true,
@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
                     children: [
                       const SizedBox(height: 45),
                       Padding(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 20, top: 10, bottom: 20),
                         child: Text(
                           'For You',
                           textAlign: TextAlign.center,
