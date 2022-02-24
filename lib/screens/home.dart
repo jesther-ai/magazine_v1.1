@@ -135,8 +135,8 @@ class Home extends StatelessWidget {
           body: SafeArea(
             top: false,
             child: RefreshIndicator(
-              color: HexColor('#DBF9FF'),
-              backgroundColor: HexColor('#FF715B'),
+              color: HexColor('#2c2e3d'),
+              backgroundColor: Colors.yellow,
               onRefresh: () => Future.delayed(const Duration(milliseconds: 100), () => debugPrint('Refreshing')),
               child: AnimationLimiter(
                 child: ListView.builder(

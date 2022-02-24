@@ -22,7 +22,7 @@ class BannerHome extends StatelessWidget {
           height: 300,
           margin: const EdgeInsets.only(right: 20),
           decoration: BoxDecoration(
-            color: Colors.red,
+            color: HexColor('#f3f5f9'),
             borderRadius: BorderRadius.circular(20),
           ),
           child: ClipRRect(
