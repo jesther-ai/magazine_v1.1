@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:magazine_v1/data/dummy_data.dart';
+
 import 'package:magazine_v1/widget/image_card.dart';
 import 'package:magazine_v1/widget/price_card.dart';
 import 'package:magazine_v1/widget/title_date_rate_card.dart';
 
 class MenuCard extends StatelessWidget {
-  const MenuCard({Key? key}) : super(key: key);
-
+  const MenuCard({
+    required this.title,
+    required this.imageUrl,
+    required this.date,
+    required this.rate,
+    required this.price,
+    required this.onPressed,
+    Key? key,
+  }) : super(key: key);
+  final String title;
+  final String imageUrl;
+  final String date;
+  final String rate;
+  final String price;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,9 +30,9 @@ class MenuCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          ImageCard(imageUrl: DummyData.bannerData[1]['imageUrl']),
-          const TitleDateRateCard(title: 'Shinning Flowers', date: '10 Dec 2021', rate: '3.8'),
-          PriceCard(price: '\$11.00', onPressed: () {}),
+          ImageCard(imageUrl: imageUrl),
+          TitleDateRateCard(title: title, date: date, rate: rate),
+          PriceCard(price: price, onPressed: onPressed),
         ],
       ),
     );

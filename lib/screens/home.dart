@@ -179,7 +179,7 @@ class Home extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 10, bottom: 0),
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: 1,
+                      itemCount: DummyData.listData.length,
                       itemBuilder: (context, index) {
                         return AnimationConfiguration.staggeredList(
                           position: index,
@@ -187,7 +187,14 @@ class Home extends StatelessWidget {
                           child: FadeInAnimation(
                             child: SlideAnimation(
                               verticalOffset: 100,
-                              child: const MenuCard(),
+                              child: MenuCard(
+                                title: DummyData.listData[index]['title'],
+                                date: DummyData.listData[index]['date'],
+                                price: DummyData.listData[index]['price'],
+                                imageUrl: DummyData.listData[index]['imageUrl'],
+                                rate: DummyData.listData[index]['rate'],
+                                onPressed: () {},
+                              ),
                             ),
                           ),
                         );
