@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 
 class BannerHome extends StatelessWidget {
-  const BannerHome({Key? key}) : super(key: key);
-
+  const BannerHome({
+    required this.title,
+    required this.date,
+    required this.imageUrl,
+    Key? key,
+  }) : super(key: key);
+  final String title;
+  final String date;
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +28,7 @@ class BannerHome extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image.network(
-              'https://images.unsplash.com/photo-1515165616480-efd71925068f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+              imageUrl,
               fit: BoxFit.cover,
             ),
           ),
@@ -33,7 +40,7 @@ class BannerHome extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Title Here',
+                title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Roboto',
@@ -44,7 +51,7 @@ class BannerHome extends StatelessWidget {
                 ),
               ),
               Text(
-                '31 March 2019',
+                date,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Roboto',
