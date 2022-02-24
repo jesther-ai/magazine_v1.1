@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class DummyData {
   static const List<Map<String, dynamic>> bannerData = [
     {
@@ -38,6 +36,27 @@ class DummyData {
       'rate': '5.0',
       'price': '\$16.00',
       'imageUrl': 'https://images.unsplash.com/photo-1512425406684-952ff74cb8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1497&q=80',
+    },
+    {
+      'title': 'Literature',
+      'date': '22 Dec 2022',
+      'rate': '5.0',
+      'price': '\$22.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1547555999-14e818e09e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
+    },
+    {
+      'title': 'Cinema',
+      'date': '25 Dec 2022',
+      'rate': '5.0',
+      'price': '\$10.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1456&q=80',
+    },
+    {
+      'title': 'Music',
+      'date': '3 Jan 2023',
+      'rate': '4.3',
+      'price': '\$3.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1544013231-143f705e952d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
     },
   ];
 }
