@@ -3,6 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/banner.dart';
+import 'package:magazine_v1/widget/menu_card.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: HexColor('#f3f5f9'),
       body: DefaultTabController(
-        length: 1,
+        length: 3,
         child: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
@@ -97,34 +98,67 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 bottom: TabBar(
-                  labelColor: HexColor('#f3f5f9'),
-                  indicatorColor: HexColor('#f3f5f9'),
-                  unselectedLabelColor: Colors.pink,
+                  labelColor: HexColor('#2b2d3c'),
+                  indicatorColor: HexColor('#818993'),
+                  unselectedLabelColor: HexColor('#818993'),
                   isScrollable: true,
                   labelPadding: const EdgeInsets.all(0),
                   padding: const EdgeInsets.all(0),
                   indicatorWeight: 1,
                   automaticIndicatorColorAdjustment: true,
+                  labelStyle: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 16,
+                    color: HexColor('#2b2d3c'),
+                  ),
                   tabs: [
                     Container(
-                      width: MediaQuery.of(context).size.width,
-                      color: Colors.white,
-                      padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'お知らせ',
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.normal,
-                              fontSize: 16,
-                              color: HexColor('#000000'),
-                            ),
-                          ),
-                          const SizedBox(width: 50),
-                        ],
+                      width: MediaQuery.of(context).size.width * .30,
+                      height: 50,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          bottomLeft: Radius.circular(15),
+                        ),
+                      ),
+                      padding: const EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                      child: const Center(
+                        child: Text(
+                          'Newest',
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * .30,
+                      height: 50,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      padding: const EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                      child: const Center(
+                        child: Text(
+                          'Popular',
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * .30,
+                      height: 50,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(15),
+                          bottomRight: Radius.circular(15),
+                        ),
+                      ),
+                      padding: const EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                      child: const Center(
+                        child: Text(
+                          'Featured',
+                        ),
                       ),
                     ),
                   ],
@@ -132,41 +166,39 @@ class Home extends StatelessWidget {
               ),
             ];
           },
-          body: SafeArea(
-            top: false,
-            child: RefreshIndicator(
-              color: HexColor('#2c2e3d'),
-              backgroundColor: Colors.yellow,
-              onRefresh: () => Future.delayed(const Duration(milliseconds: 100), () => debugPrint('Refreshing')),
-              child: AnimationLimiter(
-                child: ListView.builder(
-                  padding: const EdgeInsets.only(top: 0, bottom: 0),
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: 0,
-                  itemBuilder: (context, index) {
-                    return AnimationConfiguration.staggeredList(
-                      position: index,
-                      duration: const Duration(milliseconds: 500),
-                      child: FadeInAnimation(
-                        child: SlideAnimation(
-                          verticalOffset: 100,
-                          child: const SizedBox(),
-                          // child: MenuCard(
-                          //   body: value.data[index]['news_description'],
-                          //   title: value.data[index]['news_title'],
-                          //   imageUrl: value.data[index]['news_image'] == '' ? MenuCard.dummyData[0]['imageUrl'] : value.data[index]['news_image'],
-                          //   hexColor: value.data[index]['hex_value'],
-                          //   categoryName: value.data[index]['category_name'],
-                          //   data: MenuCard.dummyData[0],
-                          // ),
-                        ),
-                      ),
-                    );
-                  },
+          body: TabBarView(
+            children: [
+              SafeArea(
+                top: false,
+                child: RefreshIndicator(
+                  color: HexColor('#2c2e3d'),
+                  backgroundColor: Colors.yellow,
+                  onRefresh: () => Future.delayed(const Duration(milliseconds: 100), () => debugPrint('Refreshing')),
+                  child: AnimationLimiter(
+                    child: ListView.builder(
+                      padding: const EdgeInsets.only(top: 10, bottom: 0),
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 1,
+                      itemBuilder: (context, index) {
+                        return AnimationConfiguration.staggeredList(
+                          position: index,
+                          duration: const Duration(milliseconds: 500),
+                          child: FadeInAnimation(
+                            child: SlideAnimation(
+                              verticalOffset: 100,
+                              child: const MenuCard(),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ),
               ),
-            ),
+              const SizedBox(),
+              const SizedBox(),
+            ],
           ),
         ),
       ),
