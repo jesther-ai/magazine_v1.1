@@ -10,10 +10,11 @@ class MagazineSliverAppBar extends StatelessWidget {
     required this.title,
     this.drawer,
     this.imageUrl,
+    this.footer,
   }) : super(key: key);
 
   final Widget body;
-  // final Widget footer;
+  final Widget? footer;
   final String title;
   final Widget? drawer;
   final String? imageUrl;
@@ -111,7 +112,7 @@ class MagazineSliverAppBar extends StatelessWidget {
                                           maxHeight: 200.0,
                                           maxWidth: double.infinity,
                                         ),
-                                        // child: footer,
+                                        child: footer,
                                       ),
                                     ),
                                   ),
