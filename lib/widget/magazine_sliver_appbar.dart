@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
+import 'package:magazine_v1/widget/custom_back_button.dart';
 
 // ignore: must_be_immutable
 class MagazineSliverAppBar extends StatelessWidget {
   MagazineSliverAppBar({
     Key? key,
     required this.body,
+    required this.title,
     this.drawer,
     this.imageUrl,
   }) : super(key: key);
 
   final Widget body;
   // final Widget footer;
+  final String title;
   final Widget? drawer;
   final String? imageUrl;
 
@@ -33,11 +36,21 @@ class MagazineSliverAppBar extends StatelessWidget {
                   return <Widget>[
                     SliverAppBar(
                       elevation: 0,
-                      leading: BackButton(),
+                      leading: const CustomBackButton(),
                       leadingWidth: 110,
                       expandedHeight: 400.0,
                       floating: false,
                       pinned: true,
+                      title: Text(
+                        title,
+                        style: const TextStyle(
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w700,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 22,
+                          color: Colors.black,
+                        ),
+                      ),
                       flexibleSpace: LayoutBuilder(
                         builder: (
                           BuildContext context,
@@ -68,7 +81,7 @@ class MagazineSliverAppBar extends StatelessWidget {
                           );
                         },
                       ),
-                      backgroundColor: HexColor('#DBF9FF'),
+                      backgroundColor: HexColor('#f3f5f9'),
                       iconTheme: const IconThemeData(
                         color: Colors.black, //change your color here
                       ),
@@ -79,7 +92,7 @@ class MagazineSliverAppBar extends StatelessWidget {
                   top: false,
                   bottom: false,
                   child: Container(
-                    color: HexColor('#DBF9FF'),
+                    color: HexColor('#f3f5f9'),
                     child: Column(
                       children: [
                         Flexible(
@@ -117,49 +130,6 @@ class MagazineSliverAppBar extends StatelessWidget {
           data: MediaQuery.of(context).copyWith(textScaleFactor: 0.95),
         );
       },
-    );
-  }
-}
-
-class BackButton extends StatelessWidget {
-  const BackButton({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.of(context).pop(),
-      child: Container(
-        height: 5,
-        margin: const EdgeInsets.only(left: 5, top: 5, bottom: 5, right: 5),
-        decoration: BoxDecoration(
-          color: HexColor('#f3f5f9'),
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(color: Colors.black26),
-        ),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-              ),
-              Text(
-                ' Back ',
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.normal,
-                  fontSize: 18,
-                  color: Colors.black,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }

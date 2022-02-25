@@ -10,6 +10,7 @@ class MagazineDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     DummyLoading dummyloading = Provider.of<DummyLoading>(context, listen: false);
     return MagazineSliverAppBar(
+      title: dummyloading.selectedMagazine['title'],
       imageUrl: dummyloading.selectedMagazine['imageUrl'],
       body: SafeArea(
         top: false,
@@ -18,6 +19,16 @@ class MagazineDetails extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 350),
+              Text(
+                'boday HEREE',
+                style: const TextStyle(
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.normal,
+                  fontSize: 22,
+                  color: Colors.black,
+                ),
+              ),
             ],
           ),
         ),
