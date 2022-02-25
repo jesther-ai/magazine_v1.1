@@ -66,10 +66,10 @@ class MagazineBody extends StatelessWidget {
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              CustomButton(icon: Icons.share_outlined),
-              CustomButton(icon: Icons.favorite_border_outlined),
-              CustomButton(icon: Icons.star_border_rounded, isPressed: true),
+            children: [
+              CustomButton(icon: Icons.share_outlined, onTap: () {}),
+              CustomButton(icon: Icons.favorite_border_outlined, onTap: () {}),
+              CustomButton(icon: Icons.star_border_rounded, isPressed: true, onTap: () {}),
             ],
           )
         ],
