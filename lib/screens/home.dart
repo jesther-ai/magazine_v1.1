@@ -14,6 +14,7 @@ class Home extends StatelessWidget {
   static const routeName = '/home';
   @override
   Widget build(BuildContext context) {
+    initState(context);
     return Scaffold(
       backgroundColor: HexColor('#f3f5f9'),
       body: DefaultTabController(
@@ -200,5 +201,12 @@ class Home extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  initState(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      DummyLoading dummyLoad = Provider.of<DummyLoading>(context, listen: false);
+      if (!dummyLoad.isLoaded) dummyLoad.onRefresh();
+    });
   }
 }

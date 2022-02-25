@@ -7,9 +7,15 @@ class DummyLoading with ChangeNotifier {
 
   //setter
   onRefresh() {
-    Future.delayed(const Duration(milliseconds: 2000), () {
+    reset();
+    Future.delayed(const Duration(milliseconds: 500), () {
       _isLoaded = true;
       notifyListeners();
     });
+  }
+
+  reset() {
+    _isLoaded = false;
+    notifyListeners();
   }
 }
