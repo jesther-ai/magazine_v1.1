@@ -2,8 +2,7 @@
 ![Alt text](/screenshot/sampleV2.png?raw=true "Banner")<br>
 ![Alt text](/screenshot/sampleV1.gif?raw=true "ScreenShot")
 <img src="/screenshot/sampleV3.png?raw=true" width="222" height="480">
-<img src="/screenshot/sampleV4.PNG?raw=true" width="222" height="480">
-<img src="/screenshot/sampleV5.PNG?raw=true" width="222" height="480"><br><br>
+<img src="/screenshot/sampleV4.PNG?raw=true" width="222" height="480"><br><br>
 A new Flutter project.
 
 ## Getting Started
