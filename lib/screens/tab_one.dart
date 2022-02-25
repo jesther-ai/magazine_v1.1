@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/providers/dummy_loading.dart';
+import 'package:magazine_v1/screens/magazine_details.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/menu_card.dart';
 import 'package:provider/provider.dart';
@@ -42,7 +43,10 @@ class Tab1 extends StatelessWidget {
                                 price: DummyData.listRandom1[index]['price'],
                                 imageUrl: DummyData.listRandom1[index]['imageUrl'],
                                 rate: DummyData.listRandom1[index]['rate'],
-                                onTap: () => print(DummyData.listRandom1[index]),
+                                onTap: () {
+                                  value.setSelectedMagazine(DummyData.listRandom1[index]);
+                                  Navigator.of(context).pushNamed(MagazineDetails.routeName);
+                                },
                               ),
                             ),
                           ),

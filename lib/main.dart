@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_v1/providers/dummy_loading.dart';
 import 'package:magazine_v1/screens/home.dart';
+import 'package:magazine_v1/screens/magazine_details.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: const Home(),
+        routes: {MagazineDetails.routeName: (context) => const MagazineDetails()},
       ),
     );
   }
