@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:magazine_v1/data/dummy_data.dart';
+import 'package:magazine_v1/providers/dummy_loading.dart';
 import 'package:magazine_v1/screens/tab_one.dart';
 import 'package:magazine_v1/screens/tab_three.dart';
 import 'package:magazine_v1/screens/tab_two.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/banner.dart';
-import 'package:magazine_v1/widget/menu_card.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -78,24 +79,43 @@ class Home extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: double.infinity,
-                        height: 350,
-                        child: AnimationLimiter(
-                          child: ListView.builder(
-                            itemCount: DummyData.bannerData.length,
-                            padding: const EdgeInsets.only(left: 20, right: 20),
-                            physics: const BouncingScrollPhysics(),
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, index) {
-                              return BannerHome(
-                                title: DummyData.bannerData[index]['title'],
-                                date: DummyData.bannerData[index]['date'],
-                                imageUrl: DummyData.bannerData[index]['imageUrl'],
-                              );
-                            },
-                          ),
-                        ),
+                      Consumer<DummyLoading>(
+                        builder: (context, value, child) {
+                          return value.isLoaded
+                              ? SizedBox(
+                                  width: double.infinity,
+                                  height: 350,
+                                  child: AnimationLimiter(
+                                    child: ListView.builder(
+                                      itemCount: DummyData.bannerData.length,
+                                      padding: const EdgeInsets.only(left: 20, right: 20),
+                                      physics: const BouncingScrollPhysics(),
+                                      scrollDirection: Axis.horizontal,
+                                      itemBuilder: (context, index) {
+                                        return BannerHome(
+                                          title: DummyData.bannerData[index]['title'],
+                                          date: DummyData.bannerData[index]['date'],
+                                          imageUrl: DummyData.bannerData[index]['imageUrl'],
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                )
+                              : SizedBox(
+                                  width: double.infinity,
+                                  height: 350,
+                                  child: Center(
+                                    child: SizedBox(
+                                      width: 25,
+                                      height: 25,
+                                      child: CircularProgressIndicator(
+                                        color: HexColor('#2b2d3c'),
+                                        strokeWidth: 2.5,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                        },
                       ),
                     ],
                   ),
@@ -107,6 +127,7 @@ class Home extends StatelessWidget {
                   isScrollable: true,
                   labelPadding: const EdgeInsets.all(0),
                   padding: const EdgeInsets.all(0),
+                  indicatorSize: TabBarIndicatorSize.label,
                   indicatorWeight: 1,
                   automaticIndicatorColorAdjustment: true,
                   labelStyle: TextStyle(
