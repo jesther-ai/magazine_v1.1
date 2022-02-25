@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/providers/dummy_loading.dart';
-import 'package:magazine_v1/screens/magazine_details.dart';
+import 'package:magazine_v1/screens/magazine_details/magazine_details.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/menu_card.dart';
 import 'package:provider/provider.dart';
