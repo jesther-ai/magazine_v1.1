@@ -4,14 +4,14 @@ import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/menu_card.dart';
 
-class Tab1 extends StatelessWidget {
-  const Tab1({
+class Tab3 extends StatelessWidget {
+  const Tab3({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    DummyData.random1();
+    DummyData.random3();
     return SafeArea(
       top: false,
       child: RefreshIndicator(
@@ -23,7 +23,7 @@ class Tab1 extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10, bottom: 0),
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount: DummyData.listRandom1.length,
+            itemCount: DummyData.listRandom3.length,
             itemBuilder: (context, index) {
               return AnimationConfiguration.staggeredList(
                 position: index,
@@ -32,11 +32,11 @@ class Tab1 extends StatelessWidget {
                   child: SlideAnimation(
                     verticalOffset: 100,
                     child: MenuCard(
-                      title: DummyData.listRandom1[index]['title'],
-                      date: DummyData.listRandom1[index]['date'],
-                      price: DummyData.listRandom1[index]['price'],
-                      imageUrl: DummyData.listRandom1[index]['imageUrl'],
-                      rate: DummyData.listRandom1[index]['rate'],
+                      title: DummyData.listRandom3[index]['title'],
+                      date: DummyData.listRandom3[index]['date'],
+                      price: DummyData.listRandom3[index]['price'],
+                      imageUrl: DummyData.listRandom3[index]['imageUrl'],
+                      rate: DummyData.listRandom3[index]['rate'],
                       onPressed: () {},
                     ),
                   ),

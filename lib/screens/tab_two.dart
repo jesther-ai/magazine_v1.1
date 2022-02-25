@@ -11,6 +11,7 @@ class Tab2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DummyData.random2();
     return SafeArea(
       top: false,
       child: RefreshIndicator(
@@ -22,7 +23,7 @@ class Tab2 extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10, bottom: 0),
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount: DummyData.listData.length,
+            itemCount: DummyData.listRandom2.length,
             itemBuilder: (context, index) {
               return AnimationConfiguration.staggeredList(
                 position: index,
@@ -31,11 +32,11 @@ class Tab2 extends StatelessWidget {
                   child: SlideAnimation(
                     verticalOffset: 100,
                     child: MenuCard(
-                      title: DummyData.listData[index]['title'],
-                      date: DummyData.listData[index]['date'],
-                      price: DummyData.listData[index]['price'],
-                      imageUrl: DummyData.listData[index]['imageUrl'],
-                      rate: DummyData.listData[index]['rate'],
+                      title: DummyData.listRandom2[index]['title'],
+                      date: DummyData.listRandom2[index]['date'],
+                      price: DummyData.listRandom2[index]['price'],
+                      imageUrl: DummyData.listRandom2[index]['imageUrl'],
+                      rate: DummyData.listRandom2[index]['rate'],
                       onPressed: () {},
                     ),
                   ),

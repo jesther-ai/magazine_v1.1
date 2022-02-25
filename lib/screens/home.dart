@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/screens/tab_one.dart';
+import 'package:magazine_v1/screens/tab_three.dart';
 import 'package:magazine_v1/screens/tab_two.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/banner.dart';
@@ -34,12 +35,12 @@ class Home extends StatelessWidget {
                   children: [
                     const SizedBox(width: 15),
                     const CircleAvatar(
-                      radius: 20,
+                      radius: 25,
                       backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/78025987?v=4'),
                     ),
                     const SizedBox(width: 15),
                     Text(
-                      'Hi Jesther',
+                      'Hi Jesther Silvestre',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Roboto',
@@ -172,7 +173,7 @@ class Home extends StatelessWidget {
             children: [
               Tab1(),
               Tab2(),
-              SizedBox(),
+              Tab3(),
             ],
           ),
         ),

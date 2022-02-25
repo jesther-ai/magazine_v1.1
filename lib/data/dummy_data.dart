@@ -97,4 +97,25 @@ class DummyData {
       'imageUrl': 'https://images.unsplash.com/photo-1602424870405-773aad29eb47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     },
   ];
+  static List<Map<String, dynamic>> listRandom3 = [];
+  static List<Map<String, dynamic>> listRandom1 = [];
+  static List<Map<String, dynamic>> listRandom2 = [];
+
+  static random1() {
+    List<Map<String, dynamic>> listRandoming = [...listData1, ...listData];
+    listRandoming.shuffle();
+    listRandom1 = [...listRandoming];
+  }
+
+  static random2() {
+    List<Map<String, dynamic>> listRandoming = [...listData1, ...listData];
+    listRandoming.shuffle();
+    listRandom2 = [...listRandoming];
+  }
+
+  static random3() {
+    List<Map<String, dynamic>> listRandoming = [...listData1, ...listData];
+    listRandoming.shuffle();
+    listRandom3 = [...listRandoming];
+  }
 }
