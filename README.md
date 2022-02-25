@@ -1,5 +1,7 @@
 # magazine_v1
 ![Alt text](/screenshot/sampleV2.png?raw=true "Banner")<br>
+![Alt text](/screenshot/sampleV1.gif?raw=true "ScreenShot")
+![Alt text](/screenshot/sampleV3.png?raw=true "ScreenShot")
 A new Flutter project.
 
 ## Getting Started
