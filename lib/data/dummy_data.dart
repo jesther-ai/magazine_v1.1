@@ -38,11 +38,11 @@ class DummyData {
       'imageUrl': 'https://images.unsplash.com/photo-1512425406684-952ff74cb8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1497&q=80',
     },
     {
-      'title': 'Literature',
+      'title': 'Tech Minimalist',
       'date': '22 Dec 2022',
       'rate': '5.0',
       'price': '\$22.00',
-      'imageUrl': 'https://images.unsplash.com/photo-1547555999-14e818e09e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
+      'imageUrl': 'https://images.unsplash.com/photo-1593055454503-531d165c2ed8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80',
     },
     {
       'title': 'Cinema',
@@ -80,7 +80,7 @@ class DummyData {
       'date': '22 Dec 2022',
       'rate': '5.0',
       'price': '\$22.00',
-      'imageUrl': 'https://images.unsplash.com/photo-1547555999-14e818e09e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
+      'imageUrl': 'https://images.unsplash.com/photo-1619468410848-f18b4fe28b3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80',
     },
     {
       'title': 'Architecture',
