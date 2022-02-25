@@ -96,7 +96,7 @@ class MagazineBody extends StatelessWidget {
               tabs: [
                 Container(
                   width: MediaQuery.of(context).size.width * .40,
-                  height: 50,
+                  height: 55,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -115,7 +115,7 @@ class MagazineBody extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * .40,
-                  height: 50,
+                  height: 55,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -134,8 +134,9 @@ class MagazineBody extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 150,
+            Container(
+              color: Colors.transparent,
+              height: 450,
               child: const TabBarView(
                 children: [
                   Icon(Icons.directions_car),

@@ -62,7 +62,7 @@ class DummyData {
 
   static const List<Map<String, dynamic>> listData1 = [
     {
-      'title': 'Painting Festival',
+      'title': 'Music Festival',
       'date': '11 Mar 2022',
       'rate': '1.8',
       'price': '\$5.15',

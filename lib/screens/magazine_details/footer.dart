@@ -26,7 +26,7 @@ class Footer extends StatelessWidget {
           Container(
             height: 70,
             width: 250,
-            padding: const EdgeInsets.only(left: 20, right: 20),
+            padding: const EdgeInsets.only(left: 30, right: 20),
             decoration: BoxDecoration(
               color: HexColor('#3D56F0'),
               borderRadius: const BorderRadius.all(
