@@ -18,7 +18,10 @@ class MagazineDetails extends StatelessWidget {
         top: false,
         child: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),
-          child: MagazineBody(date: dummyloading.selectedMagazine['date'], rate: dummyloading.selectedMagazine['rate']),
+          child: MagazineBody(
+            date: dummyloading.selectedMagazine['date'],
+            rate: dummyloading.selectedMagazine['rate'],
+          ),
         ),
       ),
       footer: Footer(price: dummyloading.selectedMagazine['price']),
