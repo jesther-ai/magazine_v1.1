@@ -4,8 +4,8 @@ import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/menu_card.dart';
 
-class Tab1 extends StatelessWidget {
-  const Tab1({
+class Tab2 extends StatelessWidget {
+  const Tab2({
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +22,7 @@ class Tab1 extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10, bottom: 0),
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount: DummyData.listData1.length,
+            itemCount: DummyData.listData.length,
             itemBuilder: (context, index) {
               return AnimationConfiguration.staggeredList(
                 position: index,
@@ -31,11 +31,11 @@ class Tab1 extends StatelessWidget {
                   child: SlideAnimation(
                     verticalOffset: 100,
                     child: MenuCard(
-                      title: DummyData.listData1[index]['title'],
-                      date: DummyData.listData1[index]['date'],
-                      price: DummyData.listData1[index]['price'],
-                      imageUrl: DummyData.listData1[index]['imageUrl'],
-                      rate: DummyData.listData1[index]['rate'],
+                      title: DummyData.listData[index]['title'],
+                      date: DummyData.listData[index]['date'],
+                      price: DummyData.listData[index]['price'],
+                      imageUrl: DummyData.listData[index]['imageUrl'],
+                      rate: DummyData.listData[index]['rate'],
                       onPressed: () {},
                     ),
                   ),

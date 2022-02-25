@@ -13,6 +13,7 @@ class PriceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         IconButton(
           onPressed: onPressed,

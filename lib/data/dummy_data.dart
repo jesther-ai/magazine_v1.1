@@ -59,4 +59,42 @@ class DummyData {
       'imageUrl': 'https://images.unsplash.com/photo-1544013231-143f705e952d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
     },
   ];
+
+  static const List<Map<String, dynamic>> listData1 = [
+    {
+      'title': 'Painting Festival',
+      'date': '11 Mar 2022',
+      'rate': '1.8',
+      'price': '\$5.15',
+      'imageUrl': 'https://images.unsplash.com/photo-1576659339758-1bd75d5af513?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80',
+    },
+    {
+      'title': 'Art Collection',
+      'date': '7 Jan 2022',
+      'rate': '3.0',
+      'price': '\$11.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1619946070664-7051e550c16f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80',
+    },
+    {
+      'title': 'Literature',
+      'date': '22 Dec 2022',
+      'rate': '5.0',
+      'price': '\$22.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1547555999-14e818e09e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80',
+    },
+    {
+      'title': 'Architecture',
+      'date': '19 Oct 2023',
+      'rate': '1.0',
+      'price': '\$11.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1556596378-289944702b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
+    },
+    {
+      'title': 'Aspen',
+      'date': '3 Jan 2023',
+      'rate': '8.3',
+      'price': '\$34.00',
+      'imageUrl': 'https://images.unsplash.com/photo-1602424870405-773aad29eb47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    },
+  ];
 }

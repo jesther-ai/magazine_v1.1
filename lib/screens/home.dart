@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:magazine_v1/data/dummy_data.dart';
 import 'package:magazine_v1/screens/tab_one.dart';
+import 'package:magazine_v1/screens/tab_two.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
 import 'package:magazine_v1/widget/banner.dart';
 import 'package:magazine_v1/widget/menu_card.dart';
@@ -170,7 +171,7 @@ class Home extends StatelessWidget {
           body: const TabBarView(
             children: [
               Tab1(),
-              SizedBox(),
+              Tab2(),
               SizedBox(),
             ],
           ),
