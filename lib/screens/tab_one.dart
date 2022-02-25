@@ -13,7 +13,6 @@ class Tab1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    DummyData.random1();
     return SafeArea(
       top: false,
       child: RefreshIndicator(
@@ -22,6 +21,7 @@ class Tab1 extends StatelessWidget {
         onRefresh: () => Future.delayed(const Duration(milliseconds: 100), () => onRefresh(context)),
         child: Consumer<DummyLoading>(
           builder: (context, value, child) {
+            DummyData.random1();
             return value.isLoaded
                 ? AnimationLimiter(
                     child: ListView.builder(
