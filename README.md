@@ -1,5 +1,5 @@
 # magazine_v1
-
+![Alt text](/screenshot/sampleV2.png?raw=true "Banner")<br>
 A new Flutter project.
 
 ## Getting Started
