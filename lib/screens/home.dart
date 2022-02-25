@@ -97,6 +97,7 @@ class Home extends StatelessWidget {
                                           title: DummyData.bannerData[index]['title'],
                                           date: DummyData.bannerData[index]['date'],
                                           imageUrl: DummyData.bannerData[index]['imageUrl'],
+                                          onPressed: () => print(DummyData.bannerData[index]),
                                         );
                                       },
                                     ),

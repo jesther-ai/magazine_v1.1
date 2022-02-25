@@ -11,7 +11,7 @@ class MenuCard extends StatelessWidget {
     required this.date,
     required this.rate,
     required this.price,
-    required this.onPressed,
+    required this.onTap,
     Key? key,
   }) : super(key: key);
   final String title;
@@ -19,21 +19,25 @@ class MenuCard extends StatelessWidget {
   final String date;
   final String rate;
   final String price;
-  final void Function()? onPressed;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      width: double.infinity,
-      padding: const EdgeInsets.only(left: 20, right: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          ImageCard(imageUrl: imageUrl),
-          TitleDateRateCard(title: title, date: date, rate: rate),
-          PriceCard(price: price, onPressed: onPressed),
-        ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        color: Colors.transparent,
+        height: 150,
+        width: double.infinity,
+        padding: const EdgeInsets.only(left: 20, right: 20),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ImageCard(imageUrl: imageUrl),
+            TitleDateRateCard(title: title, date: date, rate: rate),
+            PriceCard(price: price),
+          ],
+        ),
       ),
     );
   }

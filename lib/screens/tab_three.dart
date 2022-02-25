@@ -42,7 +42,7 @@ class Tab3 extends StatelessWidget {
                                 price: DummyData.listRandom3[index]['price'],
                                 imageUrl: DummyData.listRandom3[index]['imageUrl'],
                                 rate: DummyData.listRandom3[index]['rate'],
-                                onPressed: () {},
+                                onTap: () => print(DummyData.listRandom1[index]),
                               ),
                             ),
                           ),
