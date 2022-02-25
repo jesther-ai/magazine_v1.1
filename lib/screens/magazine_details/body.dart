@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magazine_v1/utilities/hex_color.dart';
+import 'package:magazine_v1/widget/custom_button.dart';
 
 class MagazineBody extends StatelessWidget {
   const MagazineBody({
@@ -66,41 +67,12 @@ class MagazineBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              CustomeButton(icon: Icons.share_outlined),
-              CustomeButton(icon: Icons.favorite_border_outlined),
-              CustomeButton(icon: Icons.star_border_outlined, isPressed: true),
+              CustomButton(icon: Icons.share_outlined),
+              CustomButton(icon: Icons.favorite_border_outlined),
+              CustomButton(icon: Icons.star_border_rounded, isPressed: true),
             ],
           )
         ],
-      ),
-    );
-  }
-}
-
-class CustomeButton extends StatelessWidget {
-  const CustomeButton({
-    required this.icon,
-    this.isPressed = false,
-    Key? key,
-  }) : super(key: key);
-  final IconData? icon;
-  final bool isPressed;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      width: 60,
-      decoration: BoxDecoration(
-        color: isPressed ? HexColor('#3d56f0') : Colors.transparent,
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(
-          color: isPressed ? HexColor('#3d56f0') : Colors.black26,
-        ),
-      ),
-      child: Icon(
-        icon,
-        size: 35,
-        color: isPressed ? Colors.white : Colors.black,
       ),
     );
   }
